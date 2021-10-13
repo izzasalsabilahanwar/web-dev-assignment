@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <title> My List </title>    
+</head>
+
+    <body>
+        <h1 class ="subtitle"> My List</h1>
+        <form >
+            <input type="text" id = "new_text">
+            <button onclick="add()">Tambah</button>
+        </form>
+
+        <ul id="todo"></ul>
+
+    <script>
+        function add(){
+            let newText = document.getElementById('new_text')
+            let newTodo = "<li> <span onclick = 'toggle(this)'>"+ newText.value + "</span>"+
+            "<button onclick='remove(this)'> delete</button"
+                "</li>"
+            
+        todo.insertAdjacentHTML('afterbegin', newTodo)
+        newText.value=""
+
+        }
+        function remove(el){
+            el.parentElement.remove()
+        }
+
+    </script>
+    </body>
+    </html>
